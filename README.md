@@ -3,9 +3,9 @@
  
  - JRequest is a for-fun project designed to be a capable java.net API wrapper
  
- - I will continue updating this repo until I get bored
+ - This repo will continually be updated with any additions that come to mind
 
-- Feel free to open any issues/pull requests
+ - Feel free to open any issues/pull requests
 
 
 # How to use
