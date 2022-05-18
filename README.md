@@ -116,9 +116,13 @@ request.get("https://api.ipify.org");
 
 request.post("https://instagram.com",headers,data);
 
+// Print response for last request
+
+System.out.println(request.LastLog()); // ==> POST Response <[200]> ("https://instagram.com); Status.OK
+
 // Print responses for both requests
 
-System.out.println(request.Logs()); ==>
+System.out.println(request.Logs()); 
           /**
            * GET Response <[200]> ("https://api.ipify.org); Status.OK
            * POST Response <[200]> ("https://instagram.com); Status.OK
