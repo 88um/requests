@@ -76,6 +76,8 @@ System.out.println(request.json()); // ==> {"id":101,"body":"word","title":"ihea
 
 # Cookies
 ``` Java
+// Make sure session is set to true
+
 Sphinx request = new Sphinx(true); 
 
 // Make your request
