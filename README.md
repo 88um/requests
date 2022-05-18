@@ -1,11 +1,11 @@
 
 # JRequest
  
- - JRequest is a java.net API Wrapper built in my spare time for fun and practice
+ - JRequest is a for-fun project designed to be a capable java.net API wrapper
  
- - This project will be maintained as long as I keep learning more Java
+ - I will continue updating this repo until I get bored
 
-
+- Feel free to open any issues/pull requests
 
 
 # How to use
@@ -129,8 +129,3 @@ System.out.println(request.Logs()); ==>
 
 - * [Joshua Solo](https://github.com/88um)
 
-# Extra
-
-- I will continue updating this repo until I get bored
-
-- Feel free to open any issues/pull requests
