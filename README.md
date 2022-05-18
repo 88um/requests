@@ -1,8 +1,9 @@
 
-# Sphinx++
-- Sphinx++ is an enhancement of https://github.com/iiKillerxSG/Sphinx
-
-- It is a java.net API Wrapper built in my spare time for fun and practice
+# JRequest
+ 
+ - JRequest is a java.net API Wrapper built in my spare time for fun and practice
+ 
+ - This project will be maintained as long as I keep learning more Java
 
 
 
@@ -14,7 +15,7 @@
 ``` Java
 // Choose wether to keep session cookies or not
 
-Sphinx request = new Sphinx(true); 
+JRequest request = new JRequest(true); 
 
 // Set your request url
 
@@ -45,11 +46,11 @@ System.out.println(request.Text()); // ==> 178.22.34.59
 ``` Java
 // Choose wether to keep session cookies or not
 
-Sphinx request = new Sphinx(true); 
+JRequest request = new JRequest(true); 
 
 // Set your request url
 
-String url = "https://api.ipify.org";
+String url = "https://jsonplaceholder.typicode.com/posts";
 
 // Set your data
 
@@ -67,7 +68,7 @@ String response = request.post(url,null,data);
 
 String response = request.post(url,headers,data);
 
-System.out.println(response);  // ==> POST Response <[201]> ("https://api.ipify.org); Status.OK
+System.out.println(response);  // ==> POST Response <[201]> ("https://jsonplaceholder.typicode.com/posts"); Status.OK
 
 // Print response JSON
 
@@ -78,7 +79,7 @@ System.out.println(request.json()); // ==> {"id":101,"body":"word","title":"ihea
 ``` Java
 // Make sure session is set to true
 
-Sphinx request = new Sphinx(true); 
+JRequest request = new JRequest(true); 
 
 // Make your request
 
@@ -93,7 +94,7 @@ System.out.println(request.Cookies()); // ==> [mid=YoSKjgAEAAG6lpegfp4VzvWUqxC4,
 
 # Proxies
 ``` Java
-Sphinx request = new Sphinx(false); 
+JRequest request = new JRequest(false); 
 
 //Before you make your request, set a proxy.
 
@@ -107,7 +108,22 @@ System.out.println(request.Text()); // ==> "66.35.28.230"
 
 // Note: Only non-authenticated http proxies are supported.
 ```
+# Logging
+``` Java
+JRequest request = new JRequest(false); 
 
+request.get("https://api.ipify.org");
+
+request.post("https://instagram.com",headers,data);
+
+// Print responses for both requests
+
+System.out.println(request.Logs()); ==>
+          /**
+           * GET Response <[200]> ("https://api.ipify.org); Status.OK
+           * POST Response <[200]> ("https://instagram.com); Status.OK
+           */
+```
 
 # Contributors
 
