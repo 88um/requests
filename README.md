@@ -8,7 +8,6 @@
  - Feel free to open any issues/pull requests
 
 
-# How to use
 
 # Get method
 
