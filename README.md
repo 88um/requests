@@ -85,11 +85,11 @@ JRequest request = new JRequest(true);
 
 String response = request.get("https://instagram.com");
 
-// Print Cookie List<String,String>
+// Print Cookie List<HttpCookie>
 
 System.out.println(request.Cookies()); // ==> [mid=YoSKjgAEAAG6lpegfp4VzvWUqxC4, csrftoken=zLHbcevdAersj5DchUi3IVPI1peAOiKD]
 
-// Session feature beta for now
+// With session cookies saved, each request made with the request class will auto-include saved cookies
 ```
 
 # Proxies
@@ -108,6 +108,33 @@ System.out.println(request.Text()); // ==> "66.35.28.230"
 
 // Note: Only non-authenticated http proxies are supported.
 ```
+
+# Persistent Headers
+``` Java
+JRequest request = new JRequest(false);
+
+// Create a new headers map
+
+HashMap headers = new HashMap();
+headers.put("User-Agent","Mozilla/6.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36");
+
+// Set the request class header to our hasmap
+
+request.headers = data;
+
+// Make a request
+
+request.get("https://www.whatsmyua.info/api/v1/ua?");
+System.out.println(request.Text()); // ==> Mozilla/6.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36
+
+// Remove the class headers and make a request
+
+request.headers=null;
+request.get("https://www.whatsmyua.info/api/v1/ua?");
+System.out.println(request.Text()); // ==> Java/17.0.2
+```
+
+
 # Logging
 ``` Java
 JRequest request = new JRequest(false); 
