@@ -77,9 +77,10 @@ System.out.println(request.json()); // ==> {"id":101,"body":"word","title":"ihea
 
 # Cookies
 ``` Java
-// Make sure session is set to true
+// Session can be set to true or false
 
-JRequest request = new JRequest(true); 
+JRequest request = new JRequest(true); /*Setting this to true allows you to use the same cookies per request
+                                        * Setting this to false allows you to make fresh requests with different cookies*/
 
 // Make your request
 
@@ -89,7 +90,6 @@ String response = request.get("https://instagram.com");
 
 System.out.println(request.Cookies()); // ==> [mid=YoSKjgAEAAG6lpegfp4VzvWUqxC4, csrftoken=zLHbcevdAersj5DchUi3IVPI1peAOiKD]
 
-// With session cookies saved, each request made with the request class will auto-include saved cookies
 ```
 
 # Proxies
