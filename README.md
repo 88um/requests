@@ -117,9 +117,9 @@ JRequest request = new JRequest(false);
 HashMap headers = new HashMap();
 headers.put("User-Agent","Mozilla/6.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36");
 
-// Set the request class header to our hasmap
+// Set the request class header to our hashmap
 
-request.headers = data;
+request.headers = headers;
 
 // Make a request
 
